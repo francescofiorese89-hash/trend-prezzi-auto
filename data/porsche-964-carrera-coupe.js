@@ -1,0 +1,236 @@
+// Dataset: Porsche 911 (964) Carrera 2 / Carrera 4 Coupé — model years 1989-1994
+// Fonte di verità dell'app. Tutte le cifre sono nella valuta originale della fonte.
+// I chilometraggi delle vendite USA sono convertiti da miglia (x1,609) e arrotondati.
+// Aggiornato: 2026-10-25
+window.CAR_MODELS = window.CAR_MODELS || {};
+window.CAR_MODELS["porsche-964-carrera-coupe-1989-1994"] = {
+  model: {
+    id: "porsche-964-carrera-coupe-1989-1994",
+    make: "Porsche",
+    name: "911 (964) Carrera Coupé",
+    subtitle: "Carrera 2 e Carrera 4 Coupé come riferimento",
+    modelYears: [1989, 1990, 1991, 1992, 1993, 1994],
+    description:
+      "Prima 911 con trazione integrale (Carrera 4, dal MY 1989) e con cambio Tiptronic; la Carrera 2 arriva nel MY 1990. " +
+      "Motore 3.6 litri da 250 CV. Il mercato tracciato qui è la Carrera 2/4 Coupé di serie: RS, Turbo, Speedster, " +
+      "«30 Jahre», WTL (Werks-Turbo-Look) e le trasformazioni (Singer, RWB) valgono da 1,5 a 10 volte tanto e sono " +
+      "segnalate come esemplari speciali."
+  },
+
+  meta: {
+    lastUpdate: "2026-10-25",
+    fx: { EURUSD: 1.15, GBPUSD: 1.30 }
+  },
+
+  primarySeriesId: "finder911_eur",
+  cycleSeriesId: "finder911_eur",
+  indexBaseYear: 2020,
+
+  reading: [
+    "**Salita lunga, senza il crollo della 930.** Negli USA una Carrera 964 del 1990 si vendeva all'asta per 15-30.000 $ nel 2012-2014, 45.000 $ nel 2016 e circa 90.000 $ nel 2025 (campioni piccoli). Hagerty stima che dal 2015 molte 911 raffreddate ad aria abbiano raddoppiato o triplicato il valore; per la generazione 964 la condizione #3 è salita del 69% dal 2020 e del 28,9% negli ultimi tre anni (1991 Carrera 2, ottobre 2026).",
+    "**Europa: +50% dal 2019, poi pausa.** Una Carrera 2 Coupé manuale con buona storia costava circa 60.000 € nel 2019-2020 e oggi supera i 100.000 €. 911finder descrive una crescita continua 2012-2023 e un 2023-2025 piatto; nel 2026 Coupé e Targa sono tornate sopra il livello 2025 (mediana Carrera 2 Coupé 99.700 €, +8% sul valore medio 2025), mentre Cabriolet e Carrera 4 sono scese del 10-25%.",
+    "**Manuale batte Tiptronic, Coupé batte Cabrio.** In Europa la Carrera 2 Coupé manuale confermata vale 109.700 € contro 89.900 € delle altre (+22%); negli USA il benchmark CLASSIC.COM è 112.136 $ per la manuale e 84.152 $ per la Tiptronic. La Carrera 4 Coupé vale il 10-15% meno della Carrera 2 (89.000 € contro 99.700 €; 95.872 $ contro 112.136 $).",
+    "**Mercati speciali da tenere fuori.** Carrera RS, Turbo, Speedster, 30 Jahre, WTL e Singer spostano le medie: la mediana «tutte le 964» a 12 mesi è 149.000 $ (Oldcarsdata) e non descrive una Coupé normale. Nelle vendite qui sotto questi esemplari sono marcati come speciali ed esclusi dalle mediane.",
+    "**Italia e cambio.** Gli annunci italiani di Carrera 2/4 Coupé stanno tra 75.000 e 120.000 €, con molte Carrera 4 ad alto chilometraggio sotto gli 85.000 €; le perizie recenti su Coupé manuali indicano 89.000-110.000 €. Il premio USA sull'Europa è del 10-20% (media 12 mesi 122.351 $, circa 106.000 €, contro 99.700 €).",
+    "**Limiti dei dati.** Le serie americane per anno modello mescolano Coupé, Cabrio e Targa e hanno campioni piccoli; lo storico Hagerty e quello di CLASSIC.COM sono a pagamento; i valori europei prima del 2025 sono descrittivi, non misurati. Le quotazioni Ruoteclassiche vanno inserite a mano in «Le mie rilevazioni»."
+  ],
+
+  series: [
+    {
+      id: "finder911_eur",
+      name: "Europa — Carrera 2 Coupé, valore medio/mediana vendite (911finder, Elferspot)",
+      short: "Europa C2 Coupé (911finder)",
+      currency: "EUR",
+      kind: "median",
+      scope: "Carrera 2 Coupé; 2020 = stima Elferspot per Coupé manuale con buona storia; 2025 = valore medio 911finder; 2026 = mediana vendite MarqueScope",
+      sourceId: "finder911",
+      points: [
+        { t: 2020.5, value: 60000, note: "«circa cinque anni fa una Coupé manuale con storia decente costava ~60.000 €» (Elferspot)" },
+        { t: 2025.4, value: 92000, note: "valore medio Carrera 2 Coupé, maggio 2025 (911finder)" },
+        { t: 2026.45, value: 99700, n: 186, note: "mediana vendite ott-2025 → giu-2026; manuali confermate 109.700 € (102 vendite)" }
+      ]
+    },
+    {
+      id: "hagerty_c3",
+      name: "Hagerty Price Guide USA — 1991 Carrera 2, condizione #3 (Good)",
+      short: "Hagerty #3 (USA)",
+      currency: "USD",
+      kind: "guide",
+      scope: "1991 911 Carrera 2; i punti 2020 e 2023 sono ricavati dalle variazioni % dichiarate da Hagerty (+69% dal 2020 per la generazione 964, +28,9% a 3 anni)",
+      sourceId: "hagerty_us",
+      points: [
+        { t: 2020.8, value: 34300, note: "derivato: 58.000 $ / 1,69 (+69% in #3 dal 2020, dato Hagerty citato da Champion Porsche)" },
+        { t: 2023.8, value: 45000, note: "derivato: 58.000 $ / 1,289 (variazione a 3 anni +28,9%)" },
+        { t: 2026.8, value: 58000, note: "guida ottobre 2026; intervallo per configurazione 50.667-64.000 $" }
+      ]
+    },
+    {
+      id: "conceptcarz_1990",
+      name: "Mediana vendite d'asta — MY 1990 Carrera (Conceptcarz)",
+      short: "Mediana aste MY 1990 (USA)",
+      currency: "USD",
+      kind: "median",
+      scope: "1990 Porsche 911 Carrera 2/4, tutte le carrozzerie (nel 1990 non esistevano Turbo né RS); 77 vendite totali, campioni annuali piccoli; escluso il 2024 (2 vendite, una Singer da 1,1 M$)",
+      sourceId: "conceptcarz_1990",
+      points: [
+        { t: 2010.5, value: 16625, n: 2 },
+        { t: 2012.5, value: 15183, n: 3 },
+        { t: 2013.5, value: 18150, n: 3 },
+        { t: 2014.5, value: 29965, n: 5 },
+        { t: 2015.5, value: 33550, n: 3 },
+        { t: 2016.5, value: 45000, n: 11 },
+        { t: 2017.5, value: 42049, n: 12 },
+        { t: 2018.5, value: 52163, n: 13 },
+        { t: 2019.5, value: 46650, n: 1 },
+        { t: 2020.5, value: 36850, n: 2 },
+        { t: 2021.5, value: 111044, n: 1 },
+        { t: 2022.5, value: 79275, n: 2 },
+        { t: 2023.5, value: 116432, n: 3 },
+        { t: 2025.5, value: 91290, n: 2 }
+      ]
+    },
+    {
+      id: "hagerty_uk_excellent",
+      name: "Hagerty UK Price Guide — 1990 964 Carrera Coupé 3.6, condizione Excellent",
+      short: "Hagerty UK Excellent",
+      currency: "GBP",
+      kind: "guide",
+      scope: "1990 Porsche 911 964 Carrera Coupé 3.6 L; il punto 2023 è una versione precedente della guida (data stimata)",
+      sourceId: "hagerty_uk",
+      points: [
+        { t: 2023.5, value: 74400, note: "versione precedente della guida (circa 2023): Fair 41.500, Good 52.400, Excellent 74.400, Concours 88.000 £" },
+        { t: 2026.8, value: 93000, note: "guida 2026: Fair 51.900, Good 65.500, Excellent 93.000, Concours 109.000 £" }
+      ]
+    }
+  ],
+
+  snapshot: {
+    asOf: "2026-10",
+    valuations: [
+      { market: "USA", sourceId: "hagerty_us", item: "1991 Carrera 2", condition: "#3 Good", value: 58000, currency: "USD", date: "2026-10", note: "intervallo per configurazione 50.667-64.000 $; +28,9% in 3 anni" },
+      { market: "USA", sourceId: "hagerty_us", item: "1990-93 Carrera 4 Cabriolet (la 964 più economica)", condition: "#2 Excellent", value: 74000, currency: "USD", date: "2025-02", note: "Tiptronic -10%" },
+      { market: "USA", sourceId: "hagerty_us", item: "1990-93 Carrera 4 Cabriolet (la 964 più economica)", condition: "#3 Good", value: 56000, currency: "USD", date: "2025-02" },
+      { market: "USA", sourceId: "classiccom", item: "Carrera 2 Coupé manuale 1990-94", condition: "CMB (benchmark)", value: 112136, currency: "USD", date: "2026-10" },
+      { market: "USA", sourceId: "classiccom", item: "Carrera 2 Coupé manuale 1990-94", condition: "Media vendite 12 mesi", value: 122351, currency: "USD", n: 35, date: "2026-10", note: "min 74.282 $, max 205.000 $" },
+      { market: "USA", sourceId: "classiccom", item: "Carrera 2 Coupé Tiptronic", condition: "CMB (benchmark)", value: 84152, currency: "USD", date: "2026-10" },
+      { market: "USA", sourceId: "classiccom", item: "Carrera 4 Coupé 1989-94", condition: "CMB (benchmark)", value: 95872, currency: "USD", date: "2026-10" },
+      { market: "USA", sourceId: "classiccom", item: "Carrera 4 Coupé 1989-94", condition: "Media vendite 12 mesi", value: 103181, currency: "USD", n: 32, date: "2026-10", note: "min 22.000 $, max 165.000 $" },
+      { market: "USA", sourceId: "classiccom", item: "MY 1990 Carrera 2 Coupé manuale", condition: "Media vendite 12 mesi", value: 112477, currency: "USD", n: 15, date: "2026-10", note: "min 74.282 $, max 152.000 $" },
+      { market: "USA", sourceId: "classiccom", item: "MY 1992 Carrera 2 Coupé manuale", condition: "Media vendite 12 mesi", value: 128762, currency: "USD", n: 7, date: "2026-10", note: "min 91.000 $, max 162.000 $" },
+      { market: "USA", sourceId: "classiccom", item: "MY 1993 Carrera 2 Coupé manuale", condition: "Media vendite 12 mesi", value: 138900, currency: "USD", n: 5, date: "2026-10", note: "min 82.000 $, max 203.500 $" },
+      { market: "USA", sourceId: "oldcarsdata", item: "964 tutte le versioni (incl. Turbo, RS, Speedster)", condition: "Mediana 12 mesi", value: 149000, currency: "USD", n: 137, date: "2026-10", note: "25°-75° percentile 105.000-368.000 $: non rappresentativa di una Carrera Coupé" },
+      { market: "USA", sourceId: "conceptcarz_1991", item: "1991 Carrera, tutte le carrozzerie", condition: "Mediana storica (88 vendite)", value: 56000, currency: "USD", n: 88, date: "2026-10", note: "fascia Excellent 56.000-104.299 $, Good 33.597-56.000 $" },
+      { market: "UK", sourceId: "hagerty_uk", item: "1990 964 Carrera Coupé 3.6", condition: "Fair", value: 51900, currency: "GBP", date: "2026" },
+      { market: "UK", sourceId: "hagerty_uk", item: "1990 964 Carrera Coupé 3.6", condition: "Good", value: 65500, currency: "GBP", date: "2026" },
+      { market: "UK", sourceId: "hagerty_uk", item: "1990 964 Carrera Coupé 3.6", condition: "Excellent", value: 93000, currency: "GBP", date: "2026" },
+      { market: "UK", sourceId: "hagerty_uk", item: "1990 964 Carrera Coupé 3.6", condition: "Concours", value: 109000, currency: "GBP", date: "2026" },
+      { market: "UK", sourceId: "classicvaluer", item: "Carrera 2 Coupé", condition: "Mediana vendite dal 2020", value: 72896, currency: "GBP", n: 223, date: "2026-10", note: "min 26.495 £ dal 2020" },
+      { market: "UK", sourceId: "classicvaluer", item: "Carrera 4 Coupé", condition: "Mediana vendite dal 2020", value: 79036, currency: "GBP", n: 178, date: "2026-10", note: "min 39.850 £ dal 2020" },
+      { market: "Germania", sourceId: "chromradar", item: "Carrera 2/4", condition: "Zustand 1 (top)", value: 115000, currency: "EUR", date: "2026-10" },
+      { market: "Germania", sourceId: "chromradar", item: "Carrera 2/4", condition: "Zustand 2 (buono)", value: 78000, currency: "EUR", date: "2026-10", note: "fascia 66.300-89.700 €; Coupé manuali sopra media, Tiptronic sotto" },
+      { market: "Germania", sourceId: "chromradar", item: "Carrera 2/4", condition: "Zustand 3 (curato)", value: 52000, currency: "EUR", date: "2026-10" },
+      { market: "Europa", sourceId: "finder911", item: "Carrera 2 Coupé", condition: "Mediana vendite ott-25/giu-26", value: 99700, currency: "EUR", n: 186, date: "2026-06", headline: true, headlineLabel: "Europa: mediana Carrera 2 Coupé" },
+      { market: "Europa", sourceId: "finder911", item: "Carrera 2 Coupé manuale confermata", condition: "Mediana vendite ott-25/giu-26", value: 109700, currency: "EUR", n: 102, date: "2026-06" },
+      { market: "Europa", sourceId: "finder911", item: "Carrera 2 Coupé Tiptronic / non confermate", condition: "Mediana vendite ott-25/giu-26", value: 89900, currency: "EUR", n: 84, date: "2026-06" },
+      { market: "Europa", sourceId: "finder911", item: "Carrera 4 Coupé", condition: "Mediana vendite ott-25/giu-26", value: 89000, currency: "EUR", n: 175, date: "2026-06" },
+      { market: "Europa", sourceId: "finder911", item: "Carrera 2 Targa", condition: "Mediana vendite ott-25/giu-26", value: 99850, currency: "EUR", n: 38, date: "2026-06" },
+      { market: "Europa", sourceId: "finder911", item: "Carrera 2 Cabriolet", condition: "Mediana vendite ott-25/giu-26", value: 79957, currency: "EUR", n: 172, date: "2026-06" },
+      { market: "Europa", sourceId: "finder911", item: "Carrera 4 Cabriolet", condition: "Mediana vendite ott-25/giu-26", value: 77950, currency: "EUR", n: 60, date: "2026-06" },
+      { market: "Europa", sourceId: "finder911", item: "Carrera 4 WTL Coupé", condition: "Mediana vendite ott-25/giu-26", value: 156750, currency: "EUR", n: 8, date: "2026-06" },
+      { market: "Europa", sourceId: "classictrader", item: "Carrera 2/4 (annunci)", condition: "Fascia realistica (punto medio)", value: 85000, currency: "EUR", date: "2026-10", note: "fascia indicata 60.000-110.000 €" }
+    ]
+  },
+
+  sales: [
+    { date: "2026-10-21", my: 1990, body: "Coupé C4", price: 63723, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer", note: "prezzo convertito in £ dalla fonte" },
+    { date: "2026-10-15", my: 1992, body: "Coupé C2", price: 142000, currency: "USD", km: 90100, location: "Bellport, NY (USA)", source: "Bring a Trailer", sourceId: "classiccom", note: "modificata" },
+    { date: "2026-10-11", my: 1989, body: "Coupé C4", price: 233946, currency: "GBP", km: null, location: "Belgio", source: "Bonhams", sourceId: "classicvaluer", note: "prezzo da esemplare speciale (probabile km bassissimi o serie limitata)", outlier: true },
+    { date: "2026-10-09", my: 1993, body: "Coupé C2", price: 116883, currency: "GBP", km: 59000, location: "Knokke-Heist (BE)", source: "Broad Arrow", sourceId: "classicvaluer", note: "prezzo convertito in £ dalla fonte" },
+    { date: "2026-10-09", my: 1992, body: "Coupé C4", price: 87454, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-10-08", my: 1989, body: "Coupé C4", price: 94626, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-10-07", my: 1992, body: "Coupé C2", price: 75133, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-09-30", my: 1990, body: "Coupé C2", price: 111000, currency: "USD", km: 111000, location: "New Rochelle, NY (USA)", source: "Bring a Trailer", sourceId: "classiccom", note: "modificata" },
+    { date: "2026-09-25", my: 1990, body: "Coupé C4", price: 74264, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-09-24", my: 1990, body: "Coupé C4", price: 86997, currency: "GBP", km: null, location: "USA", source: "Mecum", sourceId: "classicvaluer" },
+    { date: "2026-09-15", my: 1992, body: "Coupé C2", price: 71225, currency: "GBP", km: null, location: "Germania", source: "Collecting Cars", sourceId: "classicvaluer" },
+    { date: "2026-09-15", my: 1990, body: "Coupé C2", price: 64609, currency: "GBP", km: null, location: "Nuova Zelanda", source: "Collecting Cars", sourceId: "classicvaluer", note: "guida a destra" },
+    { date: "2026-09-09", my: 1991, body: "Coupé C2", price: 115498, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-09-08", my: 1993, body: "Coupé C4", price: 174794, currency: "GBP", km: 68000, location: "Italia", source: "Bring a Trailer", sourceId: "classicvaluer", note: "prezzo da esemplare speciale (probabile 30 Jahre / WTL)", outlier: true },
+    { date: "2026-09-02", my: 1992, body: "Coupé C4", price: 127477, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-08-20", my: 1991, body: "Coupé C4", price: 95050, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-08-18", my: 1989, body: "Coupé C4", price: 73500, currency: "GBP", km: null, location: "Regno Unito", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-07-28", my: 1993, body: "Coupé C2", price: 99093, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-07-22", my: 1990, body: "Coupé C2", price: 57818, currency: "GBP", km: null, location: "Francia", source: "Collecting Cars", sourceId: "classicvaluer" },
+    { date: "2026-07-21", my: 1992, body: "Coupé C2", price: 72140, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-07-20", my: 1991, body: "Coupé C2", price: 63737, currency: "GBP", km: null, location: "Austria", source: "Collecting Cars", sourceId: "classicvaluer" },
+    { date: "2026-07-17", my: 1993, body: "Coupé C2", price: 103057, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-07-15", my: 1989, body: "Coupé C4", price: 91562, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-07-14", my: 1993, body: "Coupé C2", price: 65005, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-07-10", my: 1991, body: "Coupé C2", price: 160437, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer", note: "prezzo molto sopra mercato: probabile km bassissimi", outlier: true },
+    { date: "2026-07-09", my: 1991, body: "Coupé C2", price: 79275, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-07-08", my: 1989, body: "Coupé C4", price: 92355, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-07-02", my: 1993, body: "Coupé C2", price: 56909, currency: "GBP", km: null, location: "Svezia", source: "Collecting Cars", sourceId: "classicvaluer" },
+    { date: "2026-06-27", my: 1990, body: "Coupé C4", price: 81730, currency: "GBP", km: null, location: "USA", source: "Barrett-Jackson", sourceId: "classicvaluer" },
+    { date: "2026-06-25", my: 1993, body: "Coupé C4", price: 228472, currency: "GBP", km: 56000, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer", note: "prezzo da esemplare speciale (probabile 30 Jahre / WTL)", outlier: true },
+    { date: "2026-06-15", my: 1993, body: "Coupé C4", price: 258908, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer", note: "prezzo da esemplare speciale", outlier: true },
+    { date: "2026-06-02", my: 1990, body: "Coupé C4", price: 113901, currency: "GBP", km: null, location: "USA", source: "Bring a Trailer", sourceId: "classicvaluer" },
+    { date: "2026-01-24", my: 1994, body: "Coupé C2", price: 82964, currency: "USD", km: 112700, location: "Vaughan (CA)", source: "asta", sourceId: "classiccom", note: "contachilometri TMU" },
+    { date: "2024-09-14", my: 1991, body: "Coupé C2", price: 78530, currency: "USD", km: null, location: "Goodwood (UK)", source: "Bonhams", sourceId: "conceptcarz_1991", note: "allestita in specifica RS" },
+    { date: "2020-06-15", my: 1991, body: "Coupé C2", price: 67544, currency: "USD", km: null, location: "Europa", source: "RM Sotheby's", sourceId: "conceptcarz_1991" },
+    { date: "2019-06-15", my: 1991, body: "Coupé C2", price: 90047, currency: "USD", km: null, location: "Europa", source: "Bonhams", sourceId: "conceptcarz_1991" }
+  ],
+
+  listings: [
+    { date: "2026-10", my: 1989, body: "Coupé C4", km: 95000, country: "IT", price: 78900, currency: "EUR", seller: "Cazzano S. Andrea (BG)", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1989, body: "Coupé C4", km: 144000, country: "IT", price: 78000, currency: "EUR", seller: "Milano", sourceId: "autoscout24", note: "manuale" },
+    { date: "2026-10", my: 1992, body: "Coupé C4", km: 165400, country: "IT", price: 79964, currency: "EUR", seller: "Formello (RM)", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1990, body: "Coupé C2", km: 89000, country: "IT", price: 90000, currency: "EUR", seller: "Catania", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1991, body: "Coupé C2", km: 116000, country: "IT", price: 120000, currency: "EUR", seller: "Verona", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1990, body: "Coupé C4", km: 154000, country: "IT", price: 85000, currency: "EUR", seller: "Porte di Rendena (TN)", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1992, body: "Coupé C4", km: 138888, country: "IT", price: 77964, currency: "EUR", seller: "Senna Comasco (CO)", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1990, body: "Coupé C4", km: 210000, country: "IT", price: 75000, currency: "EUR", seller: "Guidonia (RM)", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1992, body: "Coupé C4", km: 94200, country: "IT", price: 95000, currency: "EUR", seller: "Coccaglio (BS)", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1989, body: "Coupé C4", km: 152166, country: "IT", price: 119000, currency: "EUR", seller: "Milano", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1990, body: "Coupé C4", km: 107000, country: "IT", price: 85000, currency: "EUR", seller: "Milano", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1989, body: "n/d C4", km: 141262, country: "IT", price: 149964, currency: "EUR", seller: "Milano", sourceId: "autoscout24", note: "prezzo alto per i km: verificare allestimento" },
+    { date: "2026-10", my: 1992, body: "n/d C2", km: 196000, country: "IT", price: 57000, currency: "EUR", seller: "Viterbo", sourceId: "autoscout24", note: "231 CV (cat)" },
+    { date: "2026-10", my: 1989, body: "Targa C4", km: 115000, country: "IT", price: 69000, currency: "EUR", seller: "Massa", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1992, body: "Cabriolet C4", km: 105000, country: "IT", price: 105000, currency: "EUR", seller: "Milano", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1991, body: "Cabriolet C2", km: 180000, country: "IT", price: 60000, currency: "EUR", seller: "Catania", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1992, body: "Cabriolet C2", km: 115500, country: "IT", price: 68000, currency: "EUR", seller: "Vercelli", sourceId: "autoscout24", note: "Tiptronic" },
+    { date: "2026-10", my: 1991, body: "Cabriolet C2", km: 65000, country: "IT", price: 80000, currency: "EUR", seller: "Viadana (MN)", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1990, body: "Cabriolet C4", km: 82000, country: "IT", price: 75000, currency: "EUR", seller: "Formigine (MO)", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1993, body: "Cabriolet C2", km: 96000, country: "IT", price: 84900, currency: "EUR", seller: "San Giuliano Milanese (MI)", sourceId: "autoscout24" },
+    { date: "2026-10", my: 1992, body: "Coupé C2", km: 182000, country: "IT", price: 99000, currency: "EUR", seller: "dealer", sourceId: "classictrader" },
+    { date: "2026-10", my: 1990, body: "Coupé C2", km: 136975, country: "BE", price: 89950, currency: "EUR", seller: "dealer", sourceId: "classictrader" },
+    { date: "2026-10", my: 1991, body: "Coupé C4", km: 96000, country: "HR", price: 109000, currency: "EUR", seller: "privato", sourceId: "classictrader" },
+    { date: "2026-10", my: 1990, body: "Cabriolet C4", km: 247950, country: "NL", price: 89950, currency: "EUR", seller: "dealer", sourceId: "classictrader" },
+    { date: "2026-10", my: 1990, body: "Cabriolet C2", km: 165000, country: "BE", price: 77950, currency: "EUR", seller: "dealer", sourceId: "classictrader" },
+    { date: "2026-10", my: 1990, body: "Cabriolet C4", km: 240000, country: "BE", price: 61000, currency: "EUR", seller: "privato", sourceId: "classictrader" },
+    { date: "2026-10", my: 1992, body: "Cabriolet C4", km: 262949, country: "BE", price: 84900, currency: "EUR", seller: "dealer", sourceId: "classictrader" },
+    { date: "2026-10", my: 1990, body: "Cabriolet C4", km: 144550, country: "NL", price: 92500, currency: "EUR", seller: "dealer", sourceId: "classictrader" },
+    { date: "2026-06", my: 1992, body: "Coupé C2", km: 118000, country: "NL", price: 119950, currency: "EUR", seller: "Oldenzaal Classics", sourceId: "classiccom", note: "manuale" },
+    { date: "2026-05", my: 1991, body: "Coupé C2", km: 74000, country: "NL", price: 134950, currency: "EUR", seller: "Oldenzaal Classics", sourceId: "classiccom", note: "manuale" },
+    { date: "2026-10", my: 1991, body: "Coupé C2", km: 177000, country: "US", price: 174999, currency: "USD", seller: "Hendrick Porsche", sourceId: "classiccom" },
+    { date: "2026-10", my: 1990, body: "Coupé C2", km: 114300, country: "US", price: 89995, currency: "USD", seller: "AutoPark Dallas", sourceId: "classiccom", note: "modificata" },
+    { date: "2026-09", my: 1993, body: "Coupé C2", km: 69200, country: "US", price: 189000, currency: "USD", seller: "Walt Grace Vintage", sourceId: "classiccom" },
+    { date: "2026-09", my: 1993, body: "Coupé C2", km: 188300, country: "US", price: 149964, currency: "USD", seller: "ZWECK", sourceId: "classiccom" },
+    { date: "2026-10", my: 1990, body: "Coupé C2", km: 175400, country: "US", price: 128975, currency: "USD", seller: "Keeler Pre-Owned", sourceId: "classiccom" },
+    { date: "2026-01", my: 1990, body: "Coupé C2", km: 215600, country: "US", price: 115000, currency: "USD", seller: "privato", sourceId: "classiccom" },
+    { date: "2026-09", my: 1989, body: "Coupé C4", km: 173800, country: "US", price: 159964, currency: "USD", seller: "ZWECK", sourceId: "classiccom" }
+  ],
+
+  sources: [
+    { id: "hagerty_us", name: "Hagerty Valuation Tools — 1991 Porsche 911 Carrera 2 (ott 2026) + articolo «The Most Affordable Porsche 911s, by Generation» (A. Newton, 25 feb 2025)", url: "https://www.hagerty.com/valuation-tools/porsche/911/1991/1991-porsche-911-carrera_2", accessed: "2026-10-25", notes: "La variazione +69% dal 2020 (condizione #3, generazione 964) è un dato Hagerty citato da Champion Porsche." },
+    { id: "hagerty_uk", name: "Hagerty UK Price Guide — 1990 Porsche 911 964 Carrera Coupé 3.6 L", url: "https://www.hagerty.co.uk/valuation/tool/results/?y=1990&mk=Porsche&md=911&sm=964+Carrera&cc=3600&b=Coupe", accessed: "2026-10-25" },
+    { id: "classiccom", name: "CLASSIC.COM — Porsche 911 Carrera 2 Coupe Manual / Carrera 4 Coupe (964) market", url: "https://www.classic.com/m/porsche/911/964/carrera-2/coupe-manual/", accessed: "2026-10-25", notes: "Statistiche a 12 mesi gratuite; storico a pagamento." },
+    { id: "classicvaluer", name: "The Classic Valuer (UK) — 911 (964) Carrera 2 Coupe e Carrera 4 Coupe", url: "https://www.theclassicvaluer.com/cars/porsche/911-(964)-carrera-2-coupe", accessed: "2026-10-25", notes: "Prezzi convertiti in GBP dalla fonte." },
+    { id: "conceptcarz_1990", name: "Conceptcarz — 1990 Porsche 911 Carrera auction results", url: "https://www.conceptcarz.com/valuation/1385/porsche-911-carrera.aspx", accessed: "2026-10-25" },
+    { id: "conceptcarz_1991", name: "Conceptcarz — 1991 Porsche 911 Carrera auction results", url: "https://www.conceptcarz.com/valuation/9780/porsche-911-carrera.aspx", accessed: "2026-10-25", notes: "Include alcune Turbo e Carrera Cup: non usata come serie storica." },
+    { id: "oldcarsdata", name: "Oldcarsdata — Porsche 964 price history (tutte le versioni)", url: "https://oldcarsdata.com/porsche/964/price-history", accessed: "2026-10-25", notes: "Mescola Carrera, Turbo, RS e Speedster: usata solo come contesto." },
+    { id: "finder911", name: "911finder.de — Preisentwicklung Porsche 964 Carrera 2 und 4 (dati 911finder maggio 2025 + MarqueScope SOLD-Archiv giugno 2026) e articolo Elferspot sul +50% dal 2019", url: "https://www.911finder.de/preisentwicklung-porsche-964-carrera-2-und-4", accessed: "2026-10-25" },
+    { id: "chromradar", name: "Chromradar.de — Marktwert Porsche 964 Carrera 2/4 (Stand mag/ott 2026)", url: "https://chromradar.de/marktwert/porsche/964-carrera", accessed: "2026-10-25" },
+    { id: "classictrader", name: "Classic Trader — annunci Porsche 911 (964)", url: "https://www.classic-trader.com/it/automobili/search/porsche/911/964", accessed: "2026-10-25" },
+    { id: "autoscout24", name: "AutoScout24.it — annunci Porsche 964 (52 offerte, prime 20 lette)", url: "https://www.autoscout24.it/lst/porsche/964", accessed: "2026-10-25" }
+  ]
+};

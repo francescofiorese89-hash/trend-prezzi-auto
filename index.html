@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trend Prezzi Auto</title>
+<meta name="description" content="Storico quotazioni, vendite recenti e annunci di auto d'epoca, per modello.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Trend prezzi auto d'epoca</p>
+    <h1 id="modelTitle">Caricamento…</h1>
+    <p class="sub" id="modelSub"></p>
+    <p class="sub" id="modelDesc"></p>
+    <div class="toolbar">
+      <label for="modelSelect">Modello
+        <select id="modelSelect"></select>
+      </label>
+      <label for="currencySelect">Valuta di lettura
+        <select id="currencySelect">
+          <option value="EUR">EUR €</option>
+          <option value="USD">USD $</option>
+          <option value="GBP">GBP £</option>
+        </select>
+      </label>
+      <label for="fxEurUsd">Cambio EUR/USD
+        <input id="fxEurUsd" type="number" step="0.01" min="0.5" max="2" inputmode="decimal">
+      </label>
+      <label for="fxGbpUsd">Cambio GBP/USD
+        <input id="fxGbpUsd" type="number" step="0.01" min="0.5" max="3" inputmode="decimal">
+      </label>
+    </div>
+  </header>
+
+  <section class="card news" id="newsSection" hidden>
+    <div class="card-head">
+      <h2>Novità in vendita</h2>
+      <div class="controls"><button class="btn secondary" type="button" id="newsSeenBtn">Segna tutto come visto</button></div>
+    </div>
+    <p class="hint" id="newsHint"></p>
+    <div id="newsBody"></div>
+  </section>
+
+  <section class="kpis" id="kpis" aria-label="Indicatori principali"></section>
+
+  <section class="card" id="trendSection">
+    <div class="card-head">
+      <h2>Trend storico</h2>
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Vista del grafico">
+          <button type="button" data-view="index" aria-pressed="true">Indice (base = 100)</button>
+          <button type="button" data-view="value" aria-pressed="false">Valore</button>
+        </div>
+      </div>
+    </div>
+    <p class="hint" id="trendHint"></p>
+    <div class="chart-box"><canvas id="trendChart" role="img" aria-label="Grafico del trend storico delle quotazioni"></canvas></div>
+    <div class="legend-note" id="trendLegendNote">
+      <span>mediana o media di vendite reali</span>
+      <span class="dash">quotazione di listino per condizione</span>
+      <span class="dot">valore medio stimato</span>
+    </div>
+    <details>
+      <summary>Tabella dei dati del grafico</summary>
+      <div class="table-wrap" id="trendTable"></div>
+    </details>
+  </section>
+
+  <section class="prose" id="reading">
+    <h2>Lettura del trend</h2>
+    <div class="cycle" id="cycleStrip"></div>
+    <div id="readingBody"></div>
+  </section>
+
+  <section class="card" id="quotesSection">
+    <div class="section-head">
+      <h2>Quotazioni attuali</h2>
+      <p id="quotesIntro"></p>
+    </div>
+    <div class="table-wrap" id="quotesTable"></div>
+  </section>
+
+  <section class="card" id="salesSection">
+    <div class="card-head">
+      <h2>Vendite recenti</h2>
+      <div class="controls">
+        <div class="chips" id="myChips" role="group" aria-label="Filtra per anno modello"></div>
+        <label class="switch"><input type="checkbox" id="outlierToggle"> mostra esemplari speciali / anomali</label>
+      </div>
+    </div>
+    <p class="hint" id="salesHint"></p>
+    <div class="minis" id="salesMinis"></div>
+    <div class="chart-box short"><canvas id="salesChart" role="img" aria-label="Dispersione dei prezzi di vendita nel tempo"></canvas></div>
+    <div class="table-wrap" id="salesTable"></div>
+  </section>
+
+  <section class="card" id="listingsSection">
+    <div class="section-head">
+      <h2>Annunci in corso</h2>
+      <p>Prezzi richiesti dai venditori, non prezzi di vendita: di norma stanno sopra la mediana delle aste.</p>
+    </div>
+    <div class="minis" id="listingsMinis"></div>
+    <div class="table-wrap" id="listingsTable"></div>
+  </section>
+
+  <section class="card" id="mineSection">
+    <div class="section-head">
+      <h2>Le mie rilevazioni</h2>
+      <p>Annota vendite viste di persona, annunci o quotazioni da riviste (Ruoteclassiche, Classic Data). Restano salvate in questo browser e compaiono nel grafico delle vendite.</p>
+    </div>
+    <form id="mineForm" class="form-grid" autocomplete="off">
+      <label class="field" for="mDate">Data <input id="mDate" name="date" type="date" required></label>
+      <label class="field" for="mType">Tipo
+        <select id="mType" name="type">
+          <option value="vendita">Vendita</option>
+          <option value="annuncio">Annuncio</option>
+          <option value="quotazione">Quotazione</option>
+        </select>
+      </label>
+      <label class="field" for="mMy">Anno modello <select id="mMy" name="my"></select></label>
+      <label class="field" for="mBody">Carrozzeria <input id="mBody" name="body" type="text" placeholder="Coupé"></label>
+      <label class="field" for="mPrice">Prezzo <input id="mPrice" name="price" type="number" min="0" step="100" required inputmode="numeric"></label>
+      <label class="field" for="mCur">Valuta
+        <select id="mCur" name="currency">
+          <option value="EUR">EUR</option>
+          <option value="USD">USD</option>
+          <option value="GBP">GBP</option>
+        </select>
+      </label>
+      <label class="field" for="mKm">Km <input id="mKm" name="km" type="number" min="0" step="100" inputmode="numeric"></label>
+      <label class="field wide" for="mNote">Fonte / nota <input id="mNote" name="note" type="text" placeholder="es. Ruoteclassiche n. 11/2026, condizione 2"></label>
+      <div class="actions">
+        <button class="btn" type="submit">Aggiungi</button>
+        <button class="btn secondary" type="button" id="exportBtn">Copia JSON</button>
+        <span class="toast" id="mineToast" role="status"></span>
+      </div>
+    </form>
+    <div id="mineTable"></div>
+    <textarea class="export" id="exportBox" hidden readonly aria-label="Esportazione JSON"></textarea>
+  </section>
+
+  <section class="sources" id="sourcesSection">
+    <h2>Fonti e metodo</h2>
+    <div class="method" id="methodBody"></div>
+    <ol id="sourcesList"></ol>
+  </section>
+
+  <footer id="footer"></footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="data/index.js"></script>
+<script src="data/novita.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
