@@ -72,7 +72,9 @@ commit. L'app mostra le novità nel riquadro «Novità in vendita» e marca come
 visita (pulsante «Segna tutto come visto»).
 
 Per vedere i dati aggiornati sul PC: doppio clic su `aggiorna.cmd` (esegue `git pull` e apre l'app).
-La routine si gestisce da https://claude.ai/code/routines (pausa, modifica dell'orario, esecuzione manuale).
+La routine («Trend prezzi auto — annunci giornalieri», cron `0 19 * * *` UTC) si gestisce da
+https://claude.ai/code/routines/trig_01Pah6b8SuzEwaqZss8UbQzx (pausa, modifica dell'orario, esecuzione manuale, log delle esecuzioni).
+Repository: https://github.com/francescofiorese89-hash/trend-prezzi-auto (privato).
 
 ## Prossimi passi possibili
 
