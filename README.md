@@ -7,8 +7,10 @@ registrato in `data/index.js`. Il primo modello tracciato è la **Porsche 911 Tu
 
 ## Come si usa
 
-- Apri `index.html` con un doppio clic (serve la connessione per caricare Chart.js e i font; senza
-  connessione restano le tabelle).
+- **Online, da qualsiasi PC o telefono:** https://francescofiorese89-hash.github.io/trend-prezzi-auto/
+  (GitHub Pages: si aggiorna da sola a ogni commit, quindi anche dopo ogni esecuzione della routine).
+- **Sul PC:** apri `index.html` con un doppio clic (serve la connessione per caricare Chart.js e i font; senza
+  connessione restano le tabelle). Le rilevazioni personali restano nel browser in cui le inserisci.
 - In alto scegli il **modello**, la **valuta di lettura** (EUR / USD / GBP) e i **cambi** usati per le conversioni.
 - **Trend storico**: vista a indice (anno base = 100, per confrontare fonti in valute diverse) oppure a valore.
   Clic sulla legenda per nascondere una serie; la tabella sotto il grafico riporta gli stessi numeri.
@@ -29,6 +31,13 @@ data/_template.js          modello vuoto per un nuovo file dati
 ```
 
 ## Aggiungere un modello
+
+**Via rapida (da qualsiasi PC):** apri `data/richieste.txt` su GitHub (il link «Scrivila in data/richieste.txt» è
+anche in cima all'app), aggiungi una riga sotto `DA FARE` nel formato `Marca | Modello | Anni | Variante | Note`
+e salva (commit). La routine delle 20:00 fa la ricerca, crea il file dati, registra il modello e sposta la riga
+sotto `FATTE`. Per non aspettare: su https://claude.ai/code/routines premi «Run» sulla routine.
+
+**Via manuale:**
 
 1. Copia `data/_template.js` in `data/<marca>-<modello>-<anni>.js`.
 2. Compila le sezioni (tutte facoltative tranne `model` e `meta`):

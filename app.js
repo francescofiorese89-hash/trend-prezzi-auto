@@ -694,6 +694,11 @@
     $('#currencySelect').value = state.currency;
     $('#fxEurUsd').value = state.fx.EURUSD;
     $('#fxGbpUsd').value = state.fx.GBPUSD;
+    const cfg = window.CAR_CONFIG || {};
+    if (cfg.repo && cfg.requestsFile) {
+      $('#requestLink').href = cfg.repo.replace(/\/$/, '') + '/edit/main/' + cfg.requestsFile;
+      $('#requestLine').hidden = false;
+    }
     bind();
     renderNews();
     const fromHash = location.hash.slice(1);

@@ -1,0 +1,16 @@
+# Richieste di nuovi modelli da tracciare.
+# Scrivi una riga per modello sotto "DA FARE", nel formato:
+#   Marca | Modello | Anni | Variante di riferimento (facoltativa) | Note (facoltative)
+# Esempi:
+#   Ferrari | 328 GTS | 1985-1989 | | tenere separata la GTB
+#   Lancia | Delta HF Integrale | 1991-1994 | Evoluzione 1 e 2 |
+#   Mercedes-Benz | 190 E 2.5-16 Evolution II | 1990 | |
+# La routine giornaliera (ore 20:00) legge questo file, fa la ricerca, crea il file dati in data/
+# e registra il modello nell'app; poi sposta la riga sotto "FATTE" (o "NON TROVATE" con il motivo).
+# Per non aspettare la sera: apri la routine su https://claude.ai/code/routines e premi "Run".
+
+DA FARE
+
+FATTE
+
+NON TROVATE
