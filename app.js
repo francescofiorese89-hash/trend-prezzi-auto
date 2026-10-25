@@ -535,21 +535,22 @@
     const root = clear($('#listingsTable'));
     $('#listingsSection').hidden = !rows.length;
     if (!rows.length) return;
-    const bodies = Array.from(new Set(rows.map(r => r.body || 'n/d')));
+    const regular = rows.filter(r => !r.outlier);
+    const bodies = Array.from(new Set(regular.map(r => r.body || 'n/d')));
     bodies.forEach(b => {
-      const arr = rows.filter(r => (r.body || 'n/d') === b).map(r => toCur(r.price, r.currency, state.currency));
+      const arr = regular.filter(r => (r.body || 'n/d') === b).map(r => toCur(r.price, r.currency, state.currency));
       minis.append(h('div', { class: 'mini' },
         h('div', { class: 'mini-label', text: b }),
         h('div', { class: 'mini-value', text: fmtMoney(median(arr), state.currency) }),
-        h('div', { class: 'mini-sub', text: 'prezzo richiesto mediano · ' + arr.length + ' annunci' })));
+        h('div', { class: 'mini-sub', text: 'prezzo richiesto mediano · ' + arr.length + ' annunci' + (rows.length > regular.length ? ' (esclusi speciali)' : '') })));
     });
     const thead = h('thead', null, h('tr', null,
       h('th', { class: 'num', text: 'MY' }), h('th', { text: 'Carrozzeria' }), h('th', { class: 'num', text: 'Km' }), h('th', { text: 'Paese' }),
       h('th', { class: 'num', text: 'Richiesta' }), h('th', { class: 'num', text: 'in ' + state.currency }), h('th', { text: 'Venditore' }), h('th', { text: 'Fonte' }), h('th', { text: 'Rilevato' }), h('th', { text: 'Note' }), h('th', { text: 'Link' })));
     const tbody = h('tbody');
-    rows.forEach(r => tbody.append(h('tr', null,
+    rows.forEach(r => tbody.append(h('tr', { class: r.outlier ? 'outlier' : null },
       h('td', { class: 'num', text: r.my }),
-      h('td', { text: r.body || 'n/d' }),
+      h('td', null, r.body || 'n/d', r.outlier ? [' ', h('span', { class: 'badge warn', text: 'speciale' })] : null),
       h('td', { class: 'num', text: fmtKm(r.km) }),
       h('td', { text: r.country || '' }),
       h('td', { class: 'num', text: fmtMoney(r.price, r.currency) }),
