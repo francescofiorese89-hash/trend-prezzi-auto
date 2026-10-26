@@ -19,7 +19,7 @@ window.CAR_MODELS["porsche-930-turbo-1985-1989"] = {
   },
 
   meta: {
-    lastUpdate: "2026-10-25",
+    lastUpdate: "2026-10-26",
     // Cambi indicativi usati SOLO per la colonna/vista convertita (modificabili dall'interfaccia).
     fx: { EURUSD: 1.15, GBPUSD: 1.30 }
   },
