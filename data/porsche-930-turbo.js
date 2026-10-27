@@ -19,7 +19,7 @@ window.CAR_MODELS["porsche-930-turbo-1985-1989"] = {
   },
 
   meta: {
-    lastUpdate: "2026-10-26",
+    lastUpdate: "2026-10-27",
     // Cambi indicativi usati SOLO per la colonna/vista convertita (modificabili dall'interfaccia).
     fx: { EURUSD: 1.15, GBPUSD: 1.30 }
   },
@@ -273,7 +273,8 @@ window.CAR_MODELS["porsche-930-turbo-1985-1989"] = {
     { date: "2025-08", my: 1988, body: "Coupé", km: 11300, country: "US", price: 365000, currency: "USD", seller: "Mouse Motors", sourceId: "classiccom" },
     { date: "2026-09", my: 1989, body: "Coupé", km: 132000, country: "UK", price: 175000, currency: "GBP", seller: "Broad Arrow Private Sales", sourceId: "classiccom", note: "Turbo LE, guida a destra" },
     { date: "2026-08", my: 1989, body: "Coupé", km: 114300, country: "US", price: 267991, currency: "USD", seller: "dealer", sourceId: "classiccom", note: "ultimo prezzo richiesto" },
-    { date: "2026-10", my: 1988, body: "Cabriolet", km: 126447, country: "NL", price: 161500, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-turbo-3-3/1988/455945", addedOn: "2026-10-25" }
+    { date: "2026-10", my: 1988, body: "Cabriolet", km: 126447, country: "NL", price: 161500, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-turbo-3-3/1988/455945", addedOn: "2026-10-25" },
+    { date: "2026-10", my: 1989, body: "Cabriolet", km: 47683, country: "NL", price: 124995, currency: "EUR", seller: "The Collectables (Heteren)", sourceId: "autoscout24", note: "stessa auto già registrata a 129.995 €: prezzo ridotto", addedOn: "2026-10-27" }
   ],
 
   sources: [
