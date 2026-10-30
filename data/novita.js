@@ -6,6 +6,8 @@
 //              seller: "dealer", url: "https://...", note: "" } ] }
 // Le voci più recenti vanno in cima. Nessuna voce = nessun controllo ancora eseguito.
 window.CAR_NEWS = [
+  {"date": "2026-10-30", "modelId": "porsche-930-turbo-1985-1989", "summary": "0 nuove auto su 36 annunci controllati (fonti: Classic Trader pagine 1-2, AutoScout24.it; classic.com non raggiungibile, 403)", "items": []},
+  {"date": "2026-10-30", "modelId": "porsche-964-carrera-coupe-1989-1994", "summary": "0 nuove auto su 85 annunci controllati (fonti: Classic Trader pagine 1-3, AutoScout24.it pagine 1-3; classic.com non raggiungibile, 403)", "items": []},
   {"date": "2026-10-29", "modelId": "porsche-930-turbo-1985-1989", "summary": "0 nuove auto su 33 annunci controllati (fonti: Classic Trader pagine 1-2, AutoScout24.it; classic.com non raggiungibile, 403)", "items": []},
   {"date": "2026-10-29", "modelId": "porsche-964-carrera-coupe-1989-1994", "summary": "1 nuova auto su 90 annunci controllati (fonti: Classic Trader pagine 1-3, AutoScout24.it pagine 1-3; classic.com non raggiungibile, 403)", "items": [{"my": 1991, "body": "Targa C2", "km": 140000, "country": "FR", "price": 89000, "currency": "EUR", "seller": "dealer", "url": "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-2/1991/470484", "note": ""}]},
   {"date": "2026-10-28", "modelId": "porsche-930-turbo-1985-1989", "summary": "0 nuove auto su 20 annunci controllati (fonti: Classic Trader pagine 1-2, AutoScout24.it; classic.com non raggiungibile, 403)", "items": []},
