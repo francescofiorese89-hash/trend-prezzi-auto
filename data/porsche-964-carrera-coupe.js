@@ -18,7 +18,7 @@ window.CAR_MODELS["porsche-964-carrera-coupe-1989-1994"] = {
   },
 
   meta: {
-    lastUpdate: "2026-10-29",
+    lastUpdate: "2026-10-31",
     fx: { EURUSD: 1.15, GBPUSD: 1.30 }
   },
 
@@ -273,7 +273,9 @@ window.CAR_MODELS["porsche-964-carrera-coupe-1989-1994"] = {
     { date: "2026-10", my: 1993, body: "Speedster", km: 42186, country: "DE", price: 175500, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-speedster/1993/447469", note: "speciale: Speedster", outlier: true, addedOn: "2026-10-26" },
     { date: "2026-10", my: 1993, body: "Cabriolet", km: 111000, country: "NL", price: 149500, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-2-america-roadster/1993/437386", note: "speciale: America Roadster; km convertiti da 69.000 miglia", outlier: true, addedOn: "2026-10-26" },
     { date: "2026-10", my: 1992, body: "Coupé", km: 100900, country: "BE", price: 189950, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-rs/1992/451123", note: "speciale: Carrera RS (stessa auto del 457488 a 210.000 €, prezzo ridotto)", outlier: true, addedOn: "2026-10-27" },
-    { date: "2026-10", my: 1991, body: "Targa C2", km: 140000, country: "FR", price: 89000, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-2/1991/470484", addedOn: "2026-10-29" }
+    { date: "2026-10", my: 1991, body: "Targa C2", km: 140000, country: "FR", price: 89000, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-2/1991/470484", addedOn: "2026-10-29" },
+    { date: "2026-10", my: 1991, body: "Coupé", km: 147000, country: "IT", price: 288900, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-turbo-3-3/1991/470663", note: "speciale: Turbo 3.3", outlier: true, addedOn: "2026-10-31" },
+    { date: "2026-10", my: 1991, body: "Coupé C2", km: 116000, country: "IT", price: 114900, currency: "EUR", seller: "privato (Verona)", sourceId: "autoscout24", note: "stessa auto già registrata a 120.000 €: prezzo ridotto", addedOn: "2026-10-31" }
   ],
 
   sources: [
