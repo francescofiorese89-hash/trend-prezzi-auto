@@ -18,7 +18,7 @@ window.CAR_MODELS["porsche-964-carrera-coupe-1989-1994"] = {
   },
 
   meta: {
-    lastUpdate: "2026-11-02",
+    lastUpdate: "2026-11-03",
     fx: { EURUSD: 1.15, GBPUSD: 1.30 }
   },
 
