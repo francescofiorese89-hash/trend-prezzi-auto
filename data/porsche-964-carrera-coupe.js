@@ -18,7 +18,7 @@ window.CAR_MODELS["porsche-964-carrera-coupe-1989-1994"] = {
   },
 
   meta: {
-    lastUpdate: "2026-11-03",
+    lastUpdate: "2026-11-04",
     fx: { EURUSD: 1.15, GBPUSD: 1.30 }
   },
 
@@ -276,7 +276,8 @@ window.CAR_MODELS["porsche-964-carrera-coupe-1989-1994"] = {
     { date: "2026-10", my: 1991, body: "Targa C2", km: 140000, country: "FR", price: 89000, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-2/1991/470484", addedOn: "2026-10-29" },
     { date: "2026-10", my: 1991, body: "Coupé", km: 147000, country: "IT", price: 288900, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-turbo-3-3/1991/470663", note: "speciale: Turbo 3.3", outlier: true, addedOn: "2026-10-31" },
     { date: "2026-10", my: 1991, body: "Coupé C2", km: 116000, country: "IT", price: 114900, currency: "EUR", seller: "privato (Verona)", sourceId: "autoscout24", note: "stessa auto già registrata a 120.000 €: prezzo ridotto", addedOn: "2026-10-31" },
-    { date: "2026-11", my: 1993, body: "Coupé", km: 157155, country: "DE", price: 39999, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-4-30-jahre-911/1993/470691", note: "speciale: 30 Jahre 911; prezzo anomalo (IVA recuperabile), verificare", outlier: true, addedOn: "2026-11-02" }
+    { date: "2026-11", my: 1993, body: "Coupé", km: 157155, country: "DE", price: 39999, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-4-30-jahre-911/1993/470691", note: "speciale: 30 Jahre 911; prezzo anomalo (IVA recuperabile), verificare", outlier: true, addedOn: "2026-11-02" },
+    { date: "2026-11", my: 1990, body: "Coupé", km: 88177, country: "IT", price: 159900, currency: "EUR", seller: "La Regina (Belvedere di Tezze sul Brenta, VI)", sourceId: "autoscout24", note: "Turbo Look TT2; stessa auto già registrata a 169.500 €: prezzo ridotto", outlier: true, addedOn: "2026-11-04" }
   ],
 
   sources: [
