@@ -6,6 +6,8 @@
 //              seller: "dealer", url: "https://...", note: "" } ] }
 // Le voci più recenti vanno in cima. Nessuna voce = nessun controllo ancora eseguito.
 window.CAR_NEWS = [
+  {"date": "2026-11-09", "modelId": "porsche-964-carrera-coupe-1989-1994", "summary": "0 nuove auto su 86 annunci controllati (fonti: Classic Trader pagine 1-3, AutoScout24.it pagine 1-3; classic.com non controllato)", "items": []},
+  {"date": "2026-11-09", "modelId": "porsche-930-turbo-1985-1989", "summary": "0 nuove auto su 34 annunci controllati (fonti: Classic Trader pagine 1-2, AutoScout24.it; classic.com non controllato)", "items": []},
   {"date": "2026-11-08", "modelId": "porsche-964-carrera-coupe-1989-1994", "summary": "0 nuove auto su 85 annunci controllati (fonti: Classic Trader pagine 1-3, AutoScout24.it pagine 1-3; classic.com non controllato)", "items": []},
   {"date": "2026-11-08", "modelId": "porsche-930-turbo-1985-1989", "summary": "0 nuove auto su 34 annunci controllati (fonti: Classic Trader pagine 1-2, AutoScout24.it; classic.com non controllato)", "items": []},
   {"date": "2026-11-07", "modelId": "porsche-964-carrera-coupe-1989-1994", "summary": "1 nuova auto su 85 annunci controllati (fonti: Classic Trader pagine 1-3, AutoScout24.it pagine 1-3; classic.com non raggiunto, 403)", "items": [{"my": 1994, "body": "Coupé C4", "km": 112800, "country": "DE", "price": 179000, "currency": "EUR", "seller": "privato", "url": "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-4-30-jahre-911/1994/460470", "note": "speciale: 30 Jahre 911", "outlier": true}]},
