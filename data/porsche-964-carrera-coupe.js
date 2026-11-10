@@ -18,7 +18,7 @@ window.CAR_MODELS["porsche-964-carrera-coupe-1989-1994"] = {
   },
 
   meta: {
-    lastUpdate: "2026-11-07",
+    lastUpdate: "2026-11-10",
     fx: { EURUSD: 1.15, GBPUSD: 1.30 }
   },
 
@@ -280,7 +280,11 @@ window.CAR_MODELS["porsche-964-carrera-coupe-1989-1994"] = {
     { date: "2026-11", my: 1990, body: "Coupé", km: 88177, country: "IT", price: 159900, currency: "EUR", seller: "La Regina (Belvedere di Tezze sul Brenta, VI)", sourceId: "autoscout24", note: "Turbo Look TT2; stessa auto già registrata a 169.500 €: prezzo ridotto", outlier: true, addedOn: "2026-11-04" },
     { date: "2026-11", my: 1993, body: "Coupé C2", km: 137500, country: "FR", price: 82500, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-2/1993/471059", addedOn: "2026-11-05" },
     { date: "2026-11", my: 1991, body: "Cabriolet C2", km: 106000, country: "DE", price: 57900, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-2/1991/471119", addedOn: "2026-11-06" },
-    { date: "2026-11", my: 1994, body: "Coupé C4", km: 112800, country: "DE", price: 179000, currency: "EUR", seller: "privato", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-4-30-jahre-911/1994/460470", note: "speciale: 30 Jahre 911", outlier: true, addedOn: "2026-11-07" }
+    { date: "2026-11", my: 1994, body: "Coupé C4", km: 112800, country: "DE", price: 179000, currency: "EUR", seller: "privato", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-4-30-jahre-911/1994/460470", note: "speciale: 30 Jahre 911", outlier: true, addedOn: "2026-11-07" },
+    { date: "2026-11", my: 1990, body: "Cabriolet C4", km: 158000, country: "IT", price: 87500, currency: "EUR", seller: "Bari (privato)", sourceId: "autoscout24", addedOn: "2026-11-10" },
+    { date: "2026-11", my: 1992, body: "Coupé C4", km: 52000, country: "IT", price: 120000, currency: "EUR", seller: "Vergiate (VA)", sourceId: "autoscout24", addedOn: "2026-11-10" },
+    { date: "2026-11", my: 1990, body: "Cabriolet C2", km: 155500, country: "IT", price: 90000, currency: "EUR", seller: "Vergiate (VA)", sourceId: "autoscout24", addedOn: "2026-11-10" },
+    { date: "2026-11", my: 1991, body: "Cabriolet C2", km: 110000, country: "IT", price: 67900, currency: "EUR", seller: "Roma", sourceId: "autoscout24", addedOn: "2026-11-10" }
   ],
 
   sources: [
