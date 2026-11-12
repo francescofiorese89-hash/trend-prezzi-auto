@@ -18,7 +18,7 @@ window.CAR_MODELS["porsche-964-carrera-coupe-1989-1994"] = {
   },
 
   meta: {
-    lastUpdate: "2026-11-10",
+    lastUpdate: "2026-11-12",
     fx: { EURUSD: 1.15, GBPUSD: 1.30 }
   },
 
@@ -284,7 +284,8 @@ window.CAR_MODELS["porsche-964-carrera-coupe-1989-1994"] = {
     { date: "2026-11", my: 1990, body: "Cabriolet C4", km: 158000, country: "IT", price: 87500, currency: "EUR", seller: "Bari (privato)", sourceId: "autoscout24", addedOn: "2026-11-10" },
     { date: "2026-11", my: 1992, body: "Coupé C4", km: 52000, country: "IT", price: 120000, currency: "EUR", seller: "Vergiate (VA)", sourceId: "autoscout24", addedOn: "2026-11-10" },
     { date: "2026-11", my: 1990, body: "Cabriolet C2", km: 155500, country: "IT", price: 90000, currency: "EUR", seller: "Vergiate (VA)", sourceId: "autoscout24", addedOn: "2026-11-10" },
-    { date: "2026-11", my: 1991, body: "Cabriolet C2", km: 110000, country: "IT", price: 67900, currency: "EUR", seller: "Roma", sourceId: "autoscout24", addedOn: "2026-11-10" }
+    { date: "2026-11", my: 1991, body: "Cabriolet C2", km: 110000, country: "IT", price: 67900, currency: "EUR", seller: "Roma", sourceId: "autoscout24", addedOn: "2026-11-10" },
+    { date: "2026-11", my: 1992, body: "n/d", km: 196000, country: "IT", price: 59000, currency: "EUR", seller: "privato (Viterbo)", sourceId: "autoscout24", addedOn: "2026-11-12" }
   ],
 
   sources: [
