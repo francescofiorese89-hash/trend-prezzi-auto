@@ -18,7 +18,7 @@ window.CAR_MODELS["porsche-964-carrera-coupe-1989-1994"] = {
   },
 
   meta: {
-    lastUpdate: "2026-11-12",
+    lastUpdate: "2026-11-13",
     fx: { EURUSD: 1.15, GBPUSD: 1.30 }
   },
 
@@ -285,7 +285,8 @@ window.CAR_MODELS["porsche-964-carrera-coupe-1989-1994"] = {
     { date: "2026-11", my: 1992, body: "Coupé C4", km: 52000, country: "IT", price: 120000, currency: "EUR", seller: "Vergiate (VA)", sourceId: "autoscout24", addedOn: "2026-11-10" },
     { date: "2026-11", my: 1990, body: "Cabriolet C2", km: 155500, country: "IT", price: 90000, currency: "EUR", seller: "Vergiate (VA)", sourceId: "autoscout24", addedOn: "2026-11-10" },
     { date: "2026-11", my: 1991, body: "Cabriolet C2", km: 110000, country: "IT", price: 67900, currency: "EUR", seller: "Roma", sourceId: "autoscout24", addedOn: "2026-11-10" },
-    { date: "2026-11", my: 1992, body: "n/d", km: 196000, country: "IT", price: 59000, currency: "EUR", seller: "privato (Viterbo)", sourceId: "autoscout24", addedOn: "2026-11-12" }
+    { date: "2026-11", my: 1992, body: "n/d", km: 196000, country: "IT", price: 59000, currency: "EUR", seller: "privato (Viterbo)", sourceId: "autoscout24", addedOn: "2026-11-12" },
+    { date: "2026-11", my: 1991, body: "Coupé C2", km: 264500, country: "NL", price: 94964, currency: "EUR", seller: "n/d", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-2/1991/471697", note: "chilometraggio molto alto", addedOn: "2026-11-13" }
   ],
 
   sources: [
