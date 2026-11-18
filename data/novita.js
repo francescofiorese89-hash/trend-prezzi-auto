@@ -6,6 +6,8 @@
 //              seller: "dealer", url: "https://...", note: "" } ] }
 // Le voci più recenti vanno in cima. Nessuna voce = nessun controllo ancora eseguito.
 window.CAR_NEWS = [
+  {"date": "2026-11-18", "modelId": "porsche-964-carrera-coupe-1989-1994", "summary": "0 nuove auto su 86 annunci controllati (fonti: Classic Trader pagine 1-3, AutoScout24.it pagine 1-3; classic.com non raggiungibile, 403)", "items": []},
+  {"date": "2026-11-18", "modelId": "porsche-930-turbo-1985-1989", "summary": "0 nuove auto su 33 annunci controllati (fonti: Classic Trader pagine 1-2, AutoScout24.it pagina 1; classic.com non raggiungibile, 403)", "items": []},
   {"date": "2026-11-17", "modelId": "porsche-964-carrera-coupe-1989-1994", "summary": "0 nuove auto su 87 annunci controllati (fonti: Classic Trader pagine 1-3, AutoScout24.it pagine 1-3; classic.com non raggiungibile, 403)", "items": []},
   {"date": "2026-11-17", "modelId": "porsche-930-turbo-1985-1989", "summary": "0 nuove auto su 33 annunci controllati (fonti: Classic Trader pagine 1-2, AutoScout24.it pagina 1; classic.com non raggiungibile, 403)", "items": []},
   {"date": "2026-11-16", "modelId": "porsche-964-carrera-coupe-1989-1994", "summary": "0 nuove auto su 96 annunci controllati (fonti: Classic Trader pagine 1-3, AutoScout24.it pagine 1-3; classic.com non raggiungibile, 403)", "items": []},
