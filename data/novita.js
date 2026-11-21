@@ -6,6 +6,8 @@
 //              seller: "dealer", url: "https://...", note: "" } ] }
 // Le voci più recenti vanno in cima. Nessuna voce = nessun controllo ancora eseguito.
 window.CAR_NEWS = [
+  {"date": "2026-11-21", "modelId": "porsche-964-carrera-coupe-1989-1994", "summary": "1 nuova auto su 84 annunci controllati (fonti: Classic Trader pagine 1-3, AutoScout24.it pagine 1-3; classic.com non raggiunto, 403)", "items": [{"my": 1994, "body": "Coupé", "km": 150000, "country": "IT", "price": 159000, "currency": "EUR", "seller": "Sono Qui Per Un Altro Motivo Srls", "url": "https://www.autoscout24.it/lst/porsche/964", "note": "speciale: 3.6 RS America", "outlier": true}]},
+  {"date": "2026-11-21", "modelId": "porsche-930-turbo-1985-1989", "summary": "0 nuove auto su 33 annunci controllati (fonti: Classic Trader pagine 1-2, AutoScout24.it pagina 1; classic.com non raggiunto, 403)", "items": []},
   {"date": "2026-11-20", "modelId": "porsche-964-carrera-coupe-1989-1994", "summary": "0 nuove auto su 83 annunci controllati (fonti: Classic Trader pagine 1-3, AutoScout24.it pagine 1-3; classic.com non raggiunto, 403 nelle esecuzioni precedenti)", "items": []},
   {"date": "2026-11-20", "modelId": "porsche-930-turbo-1985-1989", "summary": "0 nuove auto su 33 annunci controllati (fonti: Classic Trader pagine 1-2, AutoScout24.it pagina 1; classic.com non raggiunto, 403 nelle esecuzioni precedenti)", "items": []},
   {"date": "2026-11-19", "modelId": "porsche-964-carrera-coupe-1989-1994", "summary": "0 nuove auto su 85 annunci controllati (fonti: Classic Trader pagine 1-3, AutoScout24.it pagine 1-3; classic.com non raggiungibile, 403)", "items": []},
