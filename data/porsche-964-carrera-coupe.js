@@ -18,7 +18,7 @@ window.CAR_MODELS["porsche-964-carrera-coupe-1989-1994"] = {
   },
 
   meta: {
-    lastUpdate: "2026-11-22",
+    lastUpdate: "2026-11-23",
     fx: { EURUSD: 1.15, GBPUSD: 1.30 }
   },
 
@@ -290,7 +290,9 @@ window.CAR_MODELS["porsche-964-carrera-coupe-1989-1994"] = {
     { date: "2026-11", my: 1994, body: "Coupé", km: 150000, country: "IT", price: 159000, currency: "EUR", seller: "Sono Qui Per Un Altro Motivo Srls", sourceId: "autoscout24", note: "speciale: 3.6 RS America", outlier: true, addedOn: "2026-11-21" },
     { date: "2026-11", my: 1991, body: "Coupé C2", km: 264500, country: "NL", price: 89964, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-2/1991/471697", note: "stessa auto già registrata a 94.964 €: prezzo ridotto", addedOn: "2026-11-22" },
     { date: "2026-11", my: 1992, body: "Coupé", km: 129200, country: "FR", price: 198500, currency: "EUR", seller: "dealer", sourceId: "classictrader", url: "https://www.classic-trader.com/it/automobili/listing/porsche/911/911-carrera-rs/1992/469759", note: "speciale: Carrera RS; stessa auto già registrata a 205.000 €: prezzo ridotto", outlier: true, addedOn: "2026-11-22" },
-    { date: "2026-11", my: 1990, body: "Cabriolet C2", km: 170000, country: "DE", price: 68964, currency: "EUR", seller: "dealer", sourceId: "autoscout24", note: "stessa auto già registrata a 72.500 €: prezzo ridotto", addedOn: "2026-11-22" }
+    { date: "2026-11", my: 1990, body: "Cabriolet C2", km: 170000, country: "DE", price: 68964, currency: "EUR", seller: "dealer", sourceId: "autoscout24", note: "stessa auto già registrata a 72.500 €: prezzo ridotto", addedOn: "2026-11-22" },
+    { date: "2026-11", my: 1992, body: "Coupé", km: 138888, country: "IT", price: 74964, currency: "EUR", seller: "Senna Comasco (CO)", sourceId: "autoscout24", note: "stessa auto già registrata a 77.964 €: prezzo ridotto", addedOn: "2026-11-23" },
+    { date: "2026-11", my: 1994, body: "Cabriolet", km: 19000, country: "IT", price: 141850, currency: "EUR", seller: "Sesto San Giovanni (MI)", sourceId: "autoscout24", note: "stessa auto già registrata a 142.850 €: prezzo ridotto", addedOn: "2026-11-23" }
   ],
 
   sources: [
